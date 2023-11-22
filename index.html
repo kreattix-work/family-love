@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Family Love</title>
-    <link rel="stylesheet" href="./assets/scss/styles.css">
-</head>
-<body>
-    Test
-</body>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./assets/scss/styles.css" />
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <div class="header-top">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+              <a class="header-top-link">
+                <span class="material-icons-outlined link-icon">lock</span>
+                <span>Safe Payment</span>
+              </a>
+            </div>
+            <div class="col-auto">
+              <div class="d-flex align-items-center">
+                <a class="header-top-link">
+                  <span class="material-icons-outlined link-icon">person</span>
+                  <span>SIGN IN / REGISTER</span>
+                </a>
+                <a class="header-top-cart">
+                  <span class="material-icons link-icon">shopping_cart</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="container">
+          <div class="header-logo">
+            <span class="material-icons mobile-menu-icon">menu</span>
+            <img src="./assets/images/logo.svg" alt="" />
+          </div>
+          <ul class="header-navidation">
+            <li><a href="/">Home</a></li>
+            <li><a href="/products.html">Products</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li class="search-box search-box-rounded">
+              <input
+                type="search"
+                placeholder="Search for gifts and products..."
+              />
+              <button class="btn btn-search">
+                <span class="material-icons">search</span>
+              </button>
+            </li>
+          </ul>
+          <div class="header-contact-section">
+            <img src="./assets/images/earphone.png" alt="" />
+            <div>
+              <div>(555) 123-4567</div>
+              <div>msladykthopmson@yahoo.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
