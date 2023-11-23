@@ -12453,6 +12453,7 @@ p {
 }
 
 .section-footer {
+  background-color: #f2f2f2;
   padding: 50px 0;
 }
 .section-footer .row {
@@ -12472,8 +12473,10 @@ p {
   width: 100%;
 }
 .section-footer .footer-terms-policy .footer-media-icons {
-  display: flex;
-  gap: 10px;
+  max-width: 300px;
+}
+.section-footer .footer-terms-policy .footer-media-icons img {
+  width: 100%;
 }
 .section-footer .footer-links {
   list-style: none;
@@ -12488,6 +12491,7 @@ p {
   color: #000;
 }
 .section-footer .footer-call {
+  min-width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
