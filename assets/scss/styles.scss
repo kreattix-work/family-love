@@ -1,4 +1,10 @@
 $font-size-root: 14px;
+$danger: #e42020;
+$warning: #ffed00;
+$thumbnail-border-color: #000;
+$thumbnail-border-radius: 0;
+$thumbnail-padding: 0;
+$thumbnail-border-width: 2px;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -7,6 +13,7 @@ $max-xsmall: 410px;
 $max-small: 576px;
 $max-medium: 768px;
 $max-large: 992px;
+$min-large: 991px;
 $max-xlarge: 1200px;
 $max-xxlarge: 1400px;
 
@@ -18,21 +25,53 @@ $header-top-height: 35px;
 
 $header-main-height: 100px;
 
-$theme-red: #e42020;
-$theme-yellow: #ffed00;
+$hero-bg: linear-gradient(#89bdeb, #001050);
 
 a {
   cursor: pointer;
+}
+
+p {
+  line-height: 2;
 }
 
 .link-icon {
   font-size: 140%;
 }
 
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.button {
+  background-color: $danger;
+  border: 2px solid $warning;
+  color: $white;
+  font-size: 28px;
+  font-weight: 500;
+  max-width: 100%;
+  width: 270px;
+  border-radius: 100px;
+  padding: 2px 10px;
+  transition: $transition-base;
+
+  &:hover {
+    background-color: $warning;
+    border: 2px solid $danger;
+    color: $danger;
+  }
+}
+
 .header-top {
   background-color: $header-top-bg;
   height: $header-top-height;
-  border-bottom: 2px solid $theme-yellow;
+  border-bottom: 2px solid $warning;
 
   &::after {
     content: "";
@@ -40,7 +79,7 @@ a {
     position: relative;
     top: 1.5px;
     display: block;
-    border-bottom: 2px solid $theme-red;
+    border-bottom: 2px solid $danger;
   }
 
   .container {
@@ -100,7 +139,7 @@ a {
 .header-main {
   height: $header-main-height;
   background-color: white;
-  border-bottom: 2px solid $theme-red;
+  border-bottom: 2px solid $danger;
 
   @media (max-width: $max-large) {
     height: $header-main-height - 40;
@@ -116,7 +155,7 @@ a {
     position: relative;
     top: 1.5px;
     display: block;
-    border-bottom: 2px solid $theme-yellow;
+    border-bottom: 2px solid $warning;
   }
 
   .container {
@@ -222,5 +261,223 @@ a {
   }
   @media (max-width: $max-xxsmall) {
     font-size: 10px;
+  }
+}
+
+.hero-section {
+  background: $hero-bg;
+  min-height: 615px;
+}
+
+.gift-section {
+  &-content {
+    background-color: $yellow-50;
+  }
+  .gift-cards {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    @media (max-width: $max-medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $max-xsmall) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .gift-card {
+      height: 100%;
+      background-color: $yellow-50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      cursor: pointer;
+      .hover-img {
+        position: absolute;
+        opacity: 0;
+        transition: $transition-base;
+      }
+      &:hover {
+        .hover-img {
+          opacity: 1;
+        }
+      }
+
+      img {
+        max-height: 100px;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.product-card {
+  border: 2px solid $black;
+  .product-img-wrapper {
+    position: relative;
+    width: 100%;
+    .product-img {
+      position: absolute;
+      width: 100%;
+    }
+    .product-img-bg {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .product-details {
+    text-align: center;
+    background-color: $yellow-50;
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+
+    .product-price {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+
+.category-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .section-title {
+    margin-bottom: 50px;
+  }
+  .category-name {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .product-img-wrapper {
+    height: 350px;
+    .product-img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+    .product-img-bg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.how-it-works-sections {
+  background-color: #f6f5eb;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .container > .row {
+    --bs-gutter-x: 100px;
+  }
+
+  ul {
+    list-style: none;
+    font-weight: 600;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 16px;
+  }
+
+  @media (max-width: $max-large) {
+    .container > .row {
+      --bs-gutter-x: 24px;
+    }
+  }
+
+  @media (min-width: $max-medium) and (max-width: $max-large) {
+    ul {
+      font-size: 13px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+  .section-subtitle {
+    color: #8d0000;
+  }
+}
+
+.section-features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .row {
+    --bs-gutter-y: 1.5rem;
+  }
+}
+
+.section-sale {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .section-sale-box {
+    border: 3px solid $black;
+    padding: 5px;
+
+    &-inner {
+      border: 5px solid $gray-400;
+      padding: 24px 24px;
+      position: relative;
+      z-index: 1;
+      color: $white;
+      line-height: 1.3;
+
+      img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+
+      .sale-offer {
+        font-weight: 700;
+        font-size: 68px;
+      }
+      .sale-offer-title {
+        font-weight: 600;
+        font-size: 42px;
+      }
+      .sale-offer-link {
+        font-weight: 300;
+        font-size: 28px;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 12px;
+        display: block;
+      }
+      @media (max-width: $max-small) {
+        .sale-offer {
+          font-size: 58px;
+        }
+        .sale-offer-title {
+          font-size: 32px;
+        }
+        .sale-offer-link {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: $max-xsmall) {
+        .sale-offer {
+          font-size: 48px;
+        }
+        .sale-offer-title {
+          font-size: 22px;
+        }
+        .sale-offer-link {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
