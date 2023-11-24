@@ -932,3 +932,30 @@ p {
     }
   }
 }
+
+.menu-searchbar {
+  padding: 18px 24px;
+  border-bottom: 1px solid $gray-500;
+  display: flex;
+
+  input {
+    border: 0;
+    background-color: transparent;
+    font-size: 18px;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    background-color: transparent;
+    outline: none !important;
+    border: 0;
+    line-height: 0;
+    opacity: 0.8;
+    transition: $transition-base;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
