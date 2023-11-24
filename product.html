@@ -25,6 +25,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="./plugins/image-magnifier/css/jquery.jqZoom.css"
+    />
   </head>
   <body>
     <header class="header-wrapper">
@@ -84,28 +88,47 @@
     <div class="content-wrapper">
       <section class="section-pack">
         <div class="container">
-          <div class="row">
+          <div class="row row-cols-1 row-cols-md-2">
             <div class="col">
               <div class="pack-image">
-                <img src="./assets/images/products/FL-Mr-Hygiene.png" alt="" />
-                <img
-                  src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
-                  alt=""
-                  class="pack-img-bg"
-                />
+                <div class="zoom-box">
+                  <img
+                    src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
+                    alt=""
+                    class="pack-img-bg"
+                  />
+                  <img
+                    src="./assets/images/products/FL-Mr-Hygiene.png"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
             <div class="col">
-              <div class="pack-details">
-                <h2>Premium Pack</h2>
-                <h6>$136.95</h6>
-                <p>
+              <div class="pack-details mt-md-0 mt-4">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="#">Gift Packs</a>
+                  </li>
+                  <li class="breadcrumb-item active">Eatable Packs</li>
+                </ol>
+                <h1 class="pack-title">Premium Pack</h1>
+                <h2 class="pack-price">$136.95</h2>
+                <p class="mt-4">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
                   maecenas accumsan lacus vel facilisis.
                 </p>
-                <div class="pt-4 pack-quentity">
+                <div class="pt-4 pack-quantity">
+                  <div class="quantity-input">
+                    <button>-</button>
+                    <input type="number" name="" id="" value="1" />
+                    <button>+</button>
+                  </div>
                   <button class="button">Add To Cart</button>
                 </div>
               </div>
@@ -113,8 +136,8 @@
           </div>
         </div>
       </section>
-      <section class="section-description">
-        <div class="container">
+      <div class="container">
+        <section class="section-description">
           <h2 class="text-center">Description</h2>
           <p class="mt-4">
             Family Love Description: 4packs chicken Ramen noodle,4 shrimp flavor
@@ -135,73 +158,124 @@
             n Salty mix (kars) 1 Nature valley Oates with honey 8 packs of
             Crystal light powdered drink packs.
           </p>
+        </section>
+      </div>
+      <section class="may-like mb-5">
+        <div class="container">
+          <h2 class="section-title">You May Also Like</h2>
+          <div class="swiper you-may-like">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-img-wrapper">
+                    <img
+                      src="./assets/images/products/FL-Premium-Pack.png"
+                      alt=""
+                      class="product-img"
+                    />
+                    <img
+                      src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
+                      alt=""
+                      class="product-img-bg"
+                    />
+                  </div>
+                </div>
+                <div class="product-details text-center">
+                  <div class="product-name">Premium Pack</div>
+                  <div class="product-price">$139.95</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-img-wrapper">
+                    <img
+                      src="./assets/images/products/FL-Premium-Pack.png"
+                      alt=""
+                      class="product-img"
+                    />
+                    <img
+                      src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
+                      alt=""
+                      class="product-img-bg"
+                    />
+                  </div>
+                </div>
+                <div class="product-details text-center">
+                  <div class="product-name">Premium Pack</div>
+                  <div class="product-price">$139.95</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-img-wrapper">
+                    <img
+                      src="./assets/images/products/FL-Premium-Pack.png"
+                      alt=""
+                      class="product-img"
+                    />
+                    <img
+                      src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
+                      alt=""
+                      class="product-img-bg"
+                    />
+                  </div>
+                </div>
+                <div class="product-details text-center">
+                  <div class="product-name">Premium Pack</div>
+                  <div class="product-price">$139.95</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-img-wrapper">
+                    <img
+                      src="./assets/images/products/FL-Premium-Pack.png"
+                      alt=""
+                      class="product-img"
+                    />
+                    <img
+                      src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
+                      alt=""
+                      class="product-img-bg"
+                    />
+                  </div>
+                </div>
+                <div class="product-details text-center">
+                  <div class="product-name">Premium Pack</div>
+                  <div class="product-price">$139.95</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="product-card">
+                  <div class="product-img-wrapper">
+                    <img
+                      src="./assets/images/products/FL-Premium-Pack.png"
+                      alt=""
+                      class="product-img"
+                    />
+                    <img
+                      src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
+                      alt=""
+                      class="product-img-bg"
+                    />
+                  </div>
+                </div>
+                <div class="product-details text-center">
+                  <div class="product-name">Premium Pack</div>
+                  <div class="product-price">$139.95</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
         </div>
       </section>
-      <section class="may-like">
+      <section class="section-delivery">
         <div class="container">
-          <h2 class="mb-5">You May Also Like</h2>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
-            <div class="col">
-              <div class="product-card">
-                <div class="product-img-wrapper">
-                  <img
-                    src="./assets/images/products/FL-Lets-Eat-Pk.png"
-                    alt=""
-                    class="product-img"
-                  />
-                  <img
-                    src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
-                    alt=""
-                    class="product-img-bg"
-                  />
-                </div>
-                <div class="product-details">
-                  <div class="product-name">Premium Pack</div>
-                  <div class="product-price">$139.95</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="product-card">
-                <div class="product-img-wrapper">
-                  <img
-                    src="./assets/images/products/FL-Grab-n-Go.png"
-                    alt=""
-                    class="product-img"
-                  />
-                  <img
-                    src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
-                    alt=""
-                    class="product-img-bg"
-                  />
-                </div>
-                <div class="product-details">
-                  <div class="product-name">Premium Pack</div>
-                  <div class="product-price">$139.95</div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="product-card">
-                <div class="product-img-wrapper">
-                  <img
-                    src="./assets/images/products/FL-Queens-Pk.png"
-                    alt=""
-                    class="product-img"
-                  />
-                  <img
-                    src="./assets/images/products/Gary-Bkgrd-1500px.jpg"
-                    alt=""
-                    class="product-img-bg"
-                  />
-                </div>
-                <div class="product-details">
-                  <div class="product-name">Premium Pack</div>
-                  <div class="product-price">$139.95</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="section-title">Delivery Schedule</div>
+          <p>Find our when gift will arrive</p>
+          <button class="button">View Schedule</button>
         </div>
       </section>
     </div>
@@ -261,3 +335,43 @@
 <script src="./assets/js/scripts.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./plugins/image-magnifier/js/jquery.jqZoom.js"></script>
+
+<script>
+  $(".zoom-box img").jqZoom({
+    selectorWidth: 100,
+    selectorHeight: 100,
+  });
+
+  var swiper = new Swiper(".you-may-like", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 4,
+    spaceBetween: 30,
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      "@0.90": {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      "@1.20": {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
