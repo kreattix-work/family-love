@@ -12499,13 +12499,6 @@ p {
   justify-content: center;
   align-items: center;
 }
-.hero-section-content .hero-section-slider {
-  width: 100%;
-  max-width: 77%;
-}
-.hero-section-content .hero-section-slider .hero-section-slider-img {
-  max-width: 400px;
-}
 .hero-section-content .hero-section-details {
   width: 100%;
   max-width: 23%;
