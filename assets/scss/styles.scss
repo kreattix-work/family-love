@@ -272,7 +272,7 @@ p {
     align-items: center;
 
     .hero-section-slider {
-      flex: 1;
+      width: 100%;
 
       img {
         width: 100%;
@@ -292,15 +292,15 @@ p {
         font-size: 54px;
       }
     }
-    @media (max-width: $max-medium) {
+    @media (max-width: $max-large) {
       flex-direction: column;
 
       .hero-section-slider {
         order: 2;
       }
       .hero-section-details {
-        min-width: 100%;
-        max-width: 100%;
+        min-width: initial;
+        max-width: 700px;
         text-align: center;
         padding: 40px 20px;
       }
