@@ -12479,6 +12479,7 @@ p {
   width: 100%;
 }
 .section-footer .footer-links {
+  padding-left: 0px;
   list-style: none;
   font-size: 18px;
   font-weight: 700;
@@ -12490,18 +12491,24 @@ p {
   text-decoration: none;
   color: #000;
 }
-.section-footer .footer-call {
-  min-width: 250px;
+
+.hero-section-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-color: #292929;
-  padding: 30px 40px;
-  border-radius: 5px;
 }
-.section-footer .footer-call a {
-  font-size: 18px;
-  text-decoration: none;
+.hero-section-content .hero-section-slider {
+  width: 100%;
+  max-width: 77%;
+}
+.hero-section-content .hero-section-slider .hero-section-slider-img {
+  max-width: 400px;
+}
+.hero-section-content .hero-section-details {
+  width: 100%;
+  max-width: 23%;
+}
+.hero-section-content .hero-section-details h1, .hero-section-content .hero-section-details .h1 {
   color: #fff;
+  font-size: 54px;
 }/*# sourceMappingURL=styles.css.map */
