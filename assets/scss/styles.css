@@ -12218,6 +12218,8 @@ p {
 .hero-section {
   background: linear-gradient(#89bdeb, #001050);
   min-height: 615px;
+  display: flex;
+  align-items: center;
 }
 
 .gift-section-content {

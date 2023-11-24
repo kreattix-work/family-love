@@ -267,6 +267,8 @@ p {
 .hero-section {
   background: $hero-bg;
   min-height: 615px;
+  display: flex;
+  align-items: center;
 }
 
 .gift-section {
