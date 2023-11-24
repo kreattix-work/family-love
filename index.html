@@ -20,6 +20,11 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/scss/styles.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header-wrapper">
@@ -79,9 +84,24 @@
     <div class="content-wrapper">
       <section class="hero-section">
         <div class="hero-section-content">
-          <div class="hero-section-slider">
-            <img src="./assets/images/banneritem3.png" alt="" />
+          <!-- <div class="hero-section-slider">
+            <img src="./assets/images/banneritem3.png" alt="" /> -->
+
+          <div class="hero-section-slider swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/images/banneritem1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/banneritem2.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/images/banneritem3.png" alt="" />
+              </div>
+            </div>
           </div>
+
+          <!-- </div> -->
           <div class="hero-section-details">
             <h1>Let Your Loved Ones Know You Care in a Big Way!</h1>
             <button class="button mt-3">Start Shopping</button>
@@ -574,3 +594,9 @@
 
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <script src="./assets/js/scripts.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {});
+</script>
