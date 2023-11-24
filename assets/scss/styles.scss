@@ -292,6 +292,25 @@ p {
         font-size: 54px;
       }
     }
+    @media (max-width: $max-medium) {
+      flex-direction: column;
+
+      .hero-section-slider {
+        order: 2;
+      }
+      .hero-section-details {
+        min-width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 40px 20px;
+      }
+    }
+
+    @media (max-width: $max-small) {
+      .hero-section-details h1 {
+        font-size: 36px;
+      }
+    }
   }
 }
 
