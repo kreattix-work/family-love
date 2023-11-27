@@ -12851,11 +12851,15 @@ p {
   padding: 18px 24px;
   border-bottom: 1px solid #adb5bd;
   display: flex;
+  width: 100%;
+  overflow: hidden;
 }
 .menu-searchbar input {
+  width: 100%;
   border: 0;
   background-color: transparent;
   font-size: 18px;
+  padding: 0;
 }
 .menu-searchbar input:focus {
   outline: none;
@@ -12867,6 +12871,7 @@ p {
   line-height: 0;
   opacity: 0.8;
   transition: all 0.2s ease-in-out;
+  padding: 0;
 }
 .menu-searchbar button:hover {
   opacity: 1;
