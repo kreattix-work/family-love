@@ -2332,31 +2332,31 @@ textarea.form-control-lg {
 .form-check {
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5em;
+  padding-left: 1.7em;
   margin-bottom: 0.125rem;
 }
 .form-check .form-check-input {
   float: left;
-  margin-left: -1.5em;
+  margin-left: -1.7em;
 }
 
 .form-check-reverse {
-  padding-right: 1.5em;
+  padding-right: 1.7em;
   padding-left: 0;
   text-align: right;
 }
 .form-check-reverse .form-check-input {
   float: right;
-  margin-right: -1.5em;
+  margin-right: -1.7em;
   margin-left: 0;
 }
 
 .form-check-input {
   --bs-form-check-bg: var(--bs-body-bg);
   flex-shrink: 0;
-  width: 1em;
-  height: 1em;
-  margin-top: 0.25em;
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.15em;
   vertical-align: top;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -4526,9 +4526,9 @@ textarea.form-control-lg {
   --bs-accordion-bg: var(--bs-body-bg);
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
-  --bs-accordion-border-width: var(--bs-border-width);
+  --bs-accordion-border-width: 0;
   --bs-accordion-border-radius: var(--bs-border-radius);
-  --bs-accordion-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-accordion-inner-border-radius: calc(var(--bs-border-radius) - 0);
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: var(--bs-body-color);
@@ -4542,8 +4542,8 @@ textarea.form-control-lg {
   --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(71, 118, 203, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
-  --bs-accordion-active-color: var(--bs-primary-text-emphasis);
-  --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
+  --bs-accordion-active-color: inherit;
+  --bs-accordion-active-bg: transparent;
 }
 
 .accordion-button {
@@ -11983,6 +11983,11 @@ textarea.form-control-lg {
 a {
   cursor: pointer;
 }
+a:has(.product-card) {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -12032,6 +12037,11 @@ p {
   border-radius: 100px;
   padding: 2px 10px;
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .button:hover {
   background-color: #ffed00;
@@ -12140,6 +12150,10 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 12px;
+}
+.header-main .header-logo a {
+  display: inline-block;
+  height: 100%;
 }
 .header-main .header-logo img {
   height: 100%;
@@ -12788,22 +12802,23 @@ p {
     display: none;
   }
 }
+.mobile-menu-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -10;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
 @media (max-width: 991px) {
-  .mobile-menu-overlay {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: -10;
-    pointer-events: none;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-  }
   .header-mobile {
     pointer-events: none;
     opacity: 0;
@@ -12876,4 +12891,47 @@ p {
 }
 .menu-searchbar button:hover {
   opacity: 1;
+}
+
+.category-filter-sider {
+  pointer-events: none;
+  opacity: 0;
+  width: 280px;
+  background-color: #f8f9fa;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  left: -280px;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-filter-open .category-filter-sider {
+  opacity: 1;
+  left: 0;
+  pointer-events: all;
+}
+.category-filter-open .mobile-menu-overlay {
+  z-index: 10;
+  pointer-events: all;
+  opacity: 1;
+}
+
+.filter-links {
+  text-decoration: none;
+  font-size: 16px;
+  color: #080808;
+}
+.filter-links.active {
+  font-weight: bold;
+}
+
+.filter-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.filter-item-wrapper .filter-items {
+  font-size: 16px;
 }

@@ -114,7 +114,7 @@
           class="my-4 filter-section row align-items-center justify-content-between"
         >
           <div class="col-auto">
-            <a href="#" class="filter-button">
+            <a href="#" class="filter-button category-filter-icon">
               <img
                 class="filter-button-icon"
                 src="./assets/images/producticon.png"
@@ -538,6 +538,108 @@
       </section>
     </div>
 
+    <div class="category-filter-sider">
+      <div class="accordion">
+        <div class="accordion-item">
+          <h2
+            class="accordion-header fw-bold fs-5 accordion-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne"
+          >
+            Categories
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse show">
+            <div class="accordion-body filter-item-wrapper">
+              <div class="filter-items">
+                <a href="#" class="filter-links">Guift Packs (19)</a>
+              </div>
+              <div class="filter-items">
+                <a class="filter-links active" href="#">
+                  -- Eatable Packs (17)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2
+            class="accordion-header fw-bold fs-5 accordion-button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseTwo"
+          >
+            Type
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse show">
+            <div class="accordion-body filter-item-wrapper">
+              <div class="form-check filter-items">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Eatable
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2
+            class="accordion-header accordion-button fs-5 fw-bold"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseThree"
+          >
+            Price Range
+          </h2>
+          <div
+            id="flush-collapseThree"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body filter-item-wrapper">
+              <div class="form-check filter-items">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  $20 - $49.99
+                </label>
+              </div>
+              <div class="form-check filter-items">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  $50 - $74.99
+                </label>
+              </div>
+              <div class="form-check filter-items">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault3"
+                />
+                <label class="form-check-label" for="flexRadioDefault3">
+                  $75 and up
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="section-footer">
       <div class="container">
         <div class="row">
@@ -591,6 +693,7 @@
 </html>
 
 <script src="./plugins/jquery/dist/jquery.min.js"></script>
+<script src="./plugins/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="./assets/js/scripts.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
